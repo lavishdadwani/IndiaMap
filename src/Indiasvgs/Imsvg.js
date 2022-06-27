@@ -1,9 +1,7 @@
 import {useState} from "react";
-// import Upsvg from './statesSvg/Upsvg';
-import "./styles/indiaMap.css"
-// import { OverlayTrigger,Tooltip } from "react-bootstrap";
+import "../Styles/IndiaMap.css"
+import { OverlayTrigger,Tooltip } from "react-bootstrap";
 import {  useNavigate } from 'react-router-dom';
-
 
 const Imsvg = (props) => {
   const mHistory = useNavigate();

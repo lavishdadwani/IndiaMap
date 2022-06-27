@@ -1,12 +1,11 @@
 import React from 'react';
-// import Upsvg from './Icons/statesSvg/Upsvg';
-import Imsvg from './Icons/Imsvg';
+import Imsvg from '../Indiasvgs/Imsvg';
+
 const IndiaMap = () => {
   return (
     <>
-    <div>
+    <div className='px-10'>
           <Imsvg/>
-          {/* <Upsvg/> */}
     </div>
     </>
   )
