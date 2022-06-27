@@ -4,8 +4,8 @@ const SVGComponent = (props) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     xmlSpace="preserve"
-    width="297"
-    height="210"
+    width="297mm"
+    height="210mm"
     style={{
       shapeRendering: "geometricPrecision",
       textRendering: "geometricPrecision",
