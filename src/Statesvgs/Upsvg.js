@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../styles/indiaMap.css';
+import '../Styles/IndiaMap.css';
 const SVGComponent = (props) => {
   const [state, setstate] = useState('');
 
