@@ -14,6 +14,7 @@ import Haryana from "../Statesvgs/Haryana"
 import Assam from '../Statesvgs/Assam';
 import Arunachal from '../Statesvgs/Arunachal';
 import Goa from '../Statesvgs/goa';
+import Tamilnadu from '../Statesvgs/tamilnadu';
 
 const States = () => {
     const params = useParams()
@@ -62,6 +63,9 @@ const States = () => {
         )}
         {params.id === 'Goa' && (
             < Goa />
+        )}
+        {params.id === 'Tamil Nadu' && (
+            < Tamilnadu />
         )}
         
 

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const SVGComponent = (props) => {
+const Punjab = (props) => {
   const [state, setstate] = useState('');
 
   const toolTip = document.querySelector('.ToolTip');
@@ -858,4 +858,4 @@ return (
   );
 };
 
-export default SVGComponent;
+export default Punjab;

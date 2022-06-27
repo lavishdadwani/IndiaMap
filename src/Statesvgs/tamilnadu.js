@@ -1,7 +1,40 @@
-import * as React from "react";
+import React, { useState } from 'react'
 
-const SVGComponent = (props) => (
-  <svg
+const Tamilnadu = (props) => {
+  const [state, setstate] = useState('');
+
+  const toolTip = document.querySelector('.ToolTip');
+  const mouseOutEvent = (e) => {
+    let clickid = '#' + e.target.id;
+    toolTip.style.visibility = 'hidden';
+    setstate('');
+    console.log(clickid);
+    document.querySelector(clickid).style.strokeWidth = '1.5';
+    document.querySelector(clickid).style.stroke = '#FFF';
+  };
+
+  // const doubleclickEvent = (e) => {
+  //   let clickid = '#' + e.target.id;
+  //   document.querySelector(clickid).style.strokeWidth = '6';
+  //   document.querySelector(clickid).style.stroke = '#ffffff';
+  // };
+
+  const mouseEventHandle = (e) => {
+    console.log(e.target.getAttribute('id'));
+    setstate(e.target.getAttribute('id'));
+    toolTip.style.visibility = 'visible';
+    console.log(e.pageX);
+    toolTip.style.left = `${e.pageX}px`;
+    toolTip.style.top = `${e.pageY}px`;
+    let clickid = '#' + e.target.id;
+    console.log(clickid);
+    document.querySelector(clickid).style.strokeWidth = '5';
+    document.querySelector(clickid).style.stroke = '#15dceb';
+  };
+  return (
+    <>
+      <div className="ToolTip">{state}</div>
+      <svg
     id="Layer_1"
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -14,136 +47,7 @@ const SVGComponent = (props) => (
     xmlSpace="preserve"
     {...props}
   >
-    <metadata>
-      {'xpacket begin="\uFEFF" id="W5M0MpCehiHzreSzNTczkc9d"?>\n'}
-      <x:xmpmeta
-        xmlns:x="adobe:ns:meta/"
-        x:xmptk="Adobe XMP Core 5.5-c014 79.151739, 2013/04/03-12:12:15        "
-      >
-        <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-          <rdf:Description
-            rdf:about=""
-            xmlns:dc="http://purl.org/dc/elements/1.1/"
-            xmlns:xmp="http://ns.adobe.com/xap/1.0/"
-            xmlns:xmpGImg="http://ns.adobe.com/xap/1.0/g/img/"
-            xmlns:xmpMM="http://ns.adobe.com/xap/1.0/mm/"
-            xmlns:stRef="http://ns.adobe.com/xap/1.0/sType/ResourceRef#"
-            xmlns:stEvt="http://ns.adobe.com/xap/1.0/sType/ResourceEvent#"
-            xmlns:illustrator="http://ns.adobe.com/illustrator/1.0/"
-            xmlns:xmpTPg="http://ns.adobe.com/xap/1.0/t/pg/"
-            xmlns:stDim="http://ns.adobe.com/xap/1.0/sType/Dimensions#"
-            xmlns:xmpG="http://ns.adobe.com/xap/1.0/g/"
-            xmlns:pdf="http://ns.adobe.com/pdf/1.3/"
-          >
-            <dc:format>{"image/svg+xml"}</dc:format>
-            <dc:title>
-              <rdf:Alt>
-                <rdf:li xmlLang="x-default">
-                  {"Map of Tamil Nadu districts"}
-                </rdf:li>
-              </rdf:Alt>
-            </dc:title>
-            <xmp:MetadataDate>{"2016-03-08T11:51:02+05:30"}</xmp:MetadataDate>
-            <xmp:ModifyDate>{"2016-03-08T11:51:02+05:30"}</xmp:ModifyDate>
-            <xmp:CreateDate>{"2016-03-08T11:51:02+05:30"}</xmp:CreateDate>
-            <xmp:CreatorTool>
-              {"Adobe Illustrator CC (Windows)"}
-            </xmp:CreatorTool>
-            <xmp:Thumbnails>
-              <rdf:Alt>
-                <rdf:li rdf:parseType="Resource">
-                  <xmpGImg:width>{"192"}</xmpGImg:width>
-                  <xmpGImg:height>{"256"}</xmpGImg:height>
-                  <xmpGImg:format>{"JPEG"}</xmpGImg:format>
-                  <xmpGImg:image>
-                    {
-                      "/9j/4AAQSkZJRgABAgEASABIAAD/7QAsUGhvdG9zaG9wIDMuMAA4QklNA+0AAAAAABAASAAAAAEA\nAQBIAAAAAQAB/+4ADkFkb2JlAGTAAAAAAf/bAIQABgQEBAUEBgUFBgkGBQYJCwgGBggLDAoKCwoK\nDBAMDAwMDAwQDA4PEA8ODBMTFBQTExwbGxscHx8fHx8fHx8fHwEHBwcNDA0YEBAYGhURFRofHx8f\nHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8f/8AAEQgBAADAAwER\nAAIRAQMRAf/EAaIAAAAHAQEBAQEAAAAAAAAAAAQFAwIGAQAHCAkKCwEAAgIDAQEBAQEAAAAAAAAA\nAQACAwQFBgcICQoLEAACAQMDAgQCBgcDBAIGAnMBAgMRBAAFIRIxQVEGE2EicYEUMpGhBxWxQiPB\nUtHhMxZi8CRygvElQzRTkqKyY3PCNUQnk6OzNhdUZHTD0uIIJoMJChgZhJRFRqS0VtNVKBry4/PE\n1OT0ZXWFlaW1xdXl9WZ2hpamtsbW5vY3R1dnd4eXp7fH1+f3OEhYaHiImKi4yNjo+Ck5SVlpeYmZ\nqbnJ2en5KjpKWmp6ipqqusra6voRAAICAQIDBQUEBQYECAMDbQEAAhEDBCESMUEFURNhIgZxgZEy\nobHwFMHR4SNCFVJicvEzJDRDghaSUyWiY7LCB3PSNeJEgxdUkwgJChgZJjZFGidkdFU38qOzwygp\n0+PzhJSktMTU5PRldYWVpbXF1eX1RlZmdoaWprbG1ub2R1dnd4eXp7fH1+f3OEhYaHiImKi4yNjo\n+DlJWWl5iZmpucnZ6fkqOkpaanqKmqq6ytrq+v/aAAwDAQACEQMRAD8A9U4q7FXYq7FXYq7FXYq7\nFXYq7FXYq7FXYq7FXYq7FXYq7FXYq7FXYqxLWLGHXdSkNONrarJaszqXEjkEEorfAvpOftAVLCnQ\nDMPPOzTXkzcGw5ow2+pH1X/SUyyy7uAsbRV7BY5FfioG1Aanua75HxpNP5k3yWeSHvLaxk0a+FJ7\nA0gYVIe3YngwJO9CCPYU75kYZ2KcszEvUGSZch2KuxV2KuxV2KuxV2KuxV2KuxV2KuxV2KuxV2Ku\nxVqQSGNhGQshB4Mw5AHsSAVqPpxVitvc65LBdRfpGQanas8bwmOER8wT6ZoYuXCRQGG/Q9cw5ZZA\n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\ndirsVdirsVf/2Q=="
-                    }
-                  </xmpGImg:image>
-                </rdf:li>
-              </rdf:Alt>
-            </xmp:Thumbnails>
-            <xmpMM:InstanceID>
-              {"xmp.iid:ed62f74c-f8d8-ed44-986d-fd05a61709a2"}
-            </xmpMM:InstanceID>
-            <xmpMM:DocumentID>
-              {"xmp.did:ed62f74c-f8d8-ed44-986d-fd05a61709a2"}
-            </xmpMM:DocumentID>
-            <xmpMM:OriginalDocumentID>
-              {"uuid:5D20892493BFDB11914A8590D31508C8"}
-            </xmpMM:OriginalDocumentID>
-            <xmpMM:RenditionClass>{"proof:pdf"}</xmpMM:RenditionClass>
-            <xmpMM:DerivedFrom rdf:parseType="Resource">
-              <stRef:instanceID>
-                {"uuid:baff6e8f-dfc8-499c-9bce-4eb15f3a4c45"}
-              </stRef:instanceID>
-              <stRef:documentID>
-                {"xmp.did:b6f11780-29f9-3542-9d35-c791621453c8"}
-              </stRef:documentID>
-              <stRef:originalDocumentID>
-                {"uuid:5D20892493BFDB11914A8590D31508C8"}
-              </stRef:originalDocumentID>
-              <stRef:renditionClass>{"proof:pdf"}</stRef:renditionClass>
-            </xmpMM:DerivedFrom>
-            <xmpMM:History>
-              <rdf:Seq>
-                <rdf:li rdf:parseType="Resource">
-                  <stEvt:action>{"saved"}</stEvt:action>
-                  <stEvt:instanceID>
-                    {"xmp.iid:52C89D07ABB7E41185E4945D570410EF"}
-                  </stEvt:instanceID>
-                  <stEvt:when>{"2015-02-19T01:46:32+05:30"}</stEvt:when>
-                  <stEvt:softwareAgent>
-                    {"Adobe Illustrator CS6 (Windows)"}
-                  </stEvt:softwareAgent>
-                  <stEvt:changed>{"/"}</stEvt:changed>
-                </rdf:li>
-                <rdf:li rdf:parseType="Resource">
-                  <stEvt:action>{"saved"}</stEvt:action>
-                  <stEvt:instanceID>
-                    {"xmp.iid:ed62f74c-f8d8-ed44-986d-fd05a61709a2"}
-                  </stEvt:instanceID>
-                  <stEvt:when>{"2016-03-08T11:51:02+05:30"}</stEvt:when>
-                  <stEvt:softwareAgent>
-                    {"Adobe Illustrator CC (Windows)"}
-                  </stEvt:softwareAgent>
-                  <stEvt:changed>{"/"}</stEvt:changed>
-                </rdf:li>
-              </rdf:Seq>
-            </xmpMM:History>
-            <illustrator:StartupProfile>{"Print"}</illustrator:StartupProfile>
-            <xmpTPg:HasVisibleOverprint>{"False"}</xmpTPg:HasVisibleOverprint>
-            <xmpTPg:HasVisibleTransparency>
-              {"False"}
-            </xmpTPg:HasVisibleTransparency>
-            <xmpTPg:NPages>{"1"}</xmpTPg:NPages>
-            <xmpTPg:MaxPageSize rdf:parseType="Resource">
-              <stDim:w>{"588.370832"}</stDim:w>
-              <stDim:h>{"716.844444"}</stDim:h>
-              <stDim:unit>{"Millimeters"}</stDim:unit>
-            </xmpTPg:MaxPageSize>
-            <xmpTPg:PlateNames>
-              <rdf:Seq>
-                <rdf:li>{"Cyan"}</rdf:li>
-                <rdf:li>{"Magenta"}</rdf:li>
-                <rdf:li>{"Yellow"}</rdf:li>
-                <rdf:li>{"Black"}</rdf:li>
-              </rdf:Seq>
-            </xmpTPg:PlateNames>
-            <xmpTPg:SwatchGroups>
-              <rdf:Seq>
-                <rdf:li rdf:parseType="Resource">
-                  <xmpG:groupName>{"Default Swatch Group"}</xmpG:groupName>
-                  <xmpG:groupType>{"0"}</xmpG:groupType>
-                </rdf:li>
-              </rdf:Seq>
-            </xmpTPg:SwatchGroups>
-            <pdf:Producer>{"Adobe PDF library 10.01"}</pdf:Producer>
-          </rdf:Description>
-        </rdf:RDF>
-      </x:xmpmeta>
-      {'xpacket end="w"?>\n\t'}
-    </metadata>
+   
     <g id="districts">
       <g id="tn">
         <path
@@ -677,6 +581,8 @@ const SVGComponent = (props) => (
       />
     </g>
   </svg>
-);
+    </>
+  )
+}
 
-export default SVGComponent;
+export default Tamilnadu
