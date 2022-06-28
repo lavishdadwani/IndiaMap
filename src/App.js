@@ -10,7 +10,7 @@ const App = () => {
   return (
     <>
      <Routes>
-        <Route exact path="/" element={<IndiaMap/>}/>
+        <Route exact path="/IndiaMap" element={<IndiaMap/>}/>
         <Route exact path="/StateRoute/:id" element={<StateMap/>}/>
     </Routes>
     </>
