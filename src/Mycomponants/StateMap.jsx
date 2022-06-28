@@ -26,6 +26,10 @@ import Sikkim from '../Statesvgs/Sikkim';
 import Tripura from '../Statesvgs/Tripura';
 import Uttarakhand from '../Statesvgs/Uttarakhand';
 import WestBengal from '../Statesvgs/WestBengal';
+import Telangana from '../Statesvgs/Telangana';
+import Mizoram from '../Statesvgs/Mizoram';
+import Nagaland from '../Statesvgs/Nagaland';
+import Andaman from '../Statesvgs/Andaman';
 
 const States = () => {
     const params = useParams()
@@ -110,6 +114,18 @@ const States = () => {
         )}
         {params.id === 'Meghalaya' && (
             < Meghalaya />
+        )}
+        {params.id === 'Telangana' && (
+            < Telangana />
+        )}
+        {params.id === 'Mizoram' && (
+            < Mizoram />
+        )}
+        {params.id === 'Nagaland' && (
+            < Nagaland />
+        )}
+        {params.id === 'Andaman and Nicobar Islands' && (
+            < Andaman />
         )}
         
 

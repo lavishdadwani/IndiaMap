@@ -1,7 +1,9 @@
-import * as React from "react";
+import React from 'react'
 
-const Andaman = (props) => (
-  <svg
+const Andaman = (props) => {
+  return (
+    <>
+      <svg
     xmlns="http://www.w3.org/2000/svg"
     baseProfile="full"
     width={800}
@@ -86,6 +88,8 @@ const Andaman = (props) => (
       {"Created with paintmaps.com"}
     </text>
   </svg>
-);
+    </>
+  )
+}
 
-export default Andaman;
+export default Andaman
