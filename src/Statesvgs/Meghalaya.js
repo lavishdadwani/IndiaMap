@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 
 const Meghalaya = (props) => {
+  const mHistory = useNavigate();
     const [state, setstate] = useState('');
 
     const toolTip = document.querySelector('.ToolTip');
@@ -13,11 +15,12 @@ const Meghalaya = (props) => {
       document.querySelector(clickid).style.stroke = '#FFF';
     };
   
-    // const doubleclickEvent = (e) => {
-    //   let clickid = '#' + e.target.id;
-    //   document.querySelector(clickid).style.strokeWidth = '6';
-    //   document.querySelector(clickid).style.stroke = '#ffffff';
-    // };
+    const doubleclickEvent = (e) => {
+      let clickid = '#' + e.target.id;
+      document.querySelector(clickid).style.strokeWidth = '6';
+      document.querySelector(clickid).style.stroke = '#ffffff';
+      mHistory(`/block`);
+    };
   
     const mouseEventHandle = (e) => {
       console.log(e.target.getAttribute('id'));
@@ -241,6 +244,7 @@ const Meghalaya = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="East Khasi Hills"
@@ -258,6 +262,7 @@ const Meghalaya = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Jaintia Hill"
@@ -275,6 +280,7 @@ const Meghalaya = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="North_Garo_Hills"
@@ -292,6 +298,7 @@ const Meghalaya = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Ri Bhoi"
@@ -309,6 +316,7 @@ const Meghalaya = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="South Garo Hills"
@@ -326,6 +334,7 @@ const Meghalaya = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="South West Garo Hills"
@@ -343,6 +352,7 @@ const Meghalaya = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="South West Khasi Hills"
@@ -360,6 +370,7 @@ const Meghalaya = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="West Khasi Hills"
@@ -377,6 +388,7 @@ const Meghalaya = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="West Garo Hills"
@@ -394,6 +406,7 @@ const Meghalaya = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id=""

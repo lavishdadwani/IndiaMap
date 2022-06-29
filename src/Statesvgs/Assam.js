@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 
 const Assam = (props) => {
+  const mHistory = useNavigate();
   const [state, setstate] = useState('');
 
   const toolTip = document.querySelector('.ToolTip');
@@ -13,11 +15,13 @@ const Assam = (props) => {
     document.querySelector(clickid).style.stroke = '#FFF';
   };
 
-  // const doubleclickEvent = (e) => {
-  //   let clickid = '#' + e.target.id;
-  //   document.querySelector(clickid).style.strokeWidth = '6';
-  //   document.querySelector(clickid).style.stroke = '#ffffff';
-  // };
+  const doubleclickEvent = (e) => {
+    let clickid = '#' + e.target.id;
+    document.querySelector(clickid).style.strokeWidth = '6';
+    document.querySelector(clickid).style.stroke = '#ffffff';
+    mHistory(`/block`);
+  };
+
 
   const mouseEventHandle = (e) => {
     console.log(e.target.getAttribute('id'));
@@ -519,6 +523,7 @@ const Assam = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Barpeta"
@@ -537,6 +542,7 @@ const Assam = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Bongaigaon"
@@ -555,6 +561,7 @@ const Assam = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Cachar"
@@ -573,6 +580,7 @@ const Assam = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Chirang"
@@ -591,6 +599,7 @@ const Assam = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Darrang"
@@ -609,6 +618,7 @@ const Assam = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Dhemaji"
@@ -627,6 +637,7 @@ const Assam = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Dhubri"
@@ -645,6 +656,7 @@ const Assam = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Dibrugarh"
@@ -663,6 +675,7 @@ const Assam = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Dima Hasao"
@@ -681,6 +694,7 @@ const Assam = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Goalpara"
@@ -699,6 +713,7 @@ const Assam = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Golaghat"
@@ -717,6 +732,7 @@ const Assam = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Hailakandi"
@@ -735,6 +751,7 @@ const Assam = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Jorhat"
@@ -753,6 +770,7 @@ const Assam = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Kamrup"
@@ -771,6 +789,7 @@ const Assam = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Kamrup Metropolitan"
@@ -789,6 +808,7 @@ const Assam = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Karbi Anglong"
@@ -807,6 +827,7 @@ const Assam = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Karimganj"
@@ -825,6 +846,7 @@ const Assam = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Kokrajhar"
@@ -843,6 +865,7 @@ const Assam = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Lakhimpur"
@@ -861,6 +884,7 @@ const Assam = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Morigaon"
@@ -879,6 +903,7 @@ const Assam = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Nagaon"
@@ -897,6 +922,7 @@ const Assam = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Nalbari"
@@ -915,6 +941,7 @@ const Assam = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Sivasagar"
@@ -933,6 +960,7 @@ const Assam = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Sonitpur"
@@ -951,6 +979,7 @@ const Assam = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Tinsukia"
@@ -969,6 +998,7 @@ const Assam = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Udalguri"
@@ -987,6 +1017,7 @@ const Assam = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <defs>
       <filter id="f1" x="-100%" y="-100%" width="1000%" height="1000%">

@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 
 const Karnataka = (props) => {
+  const mHistory = useNavigate();
     const [state, setstate] = useState('');
 
     const toolTip = document.querySelector('.ToolTip');
@@ -13,11 +15,12 @@ const Karnataka = (props) => {
       document.querySelector(clickid).style.stroke = '#FFF';
     };
   
-    // const doubleclickEvent = (e) => {
-    //   let clickid = '#' + e.target.id;
-    //   document.querySelector(clickid).style.strokeWidth = '6';
-    //   document.querySelector(clickid).style.stroke = '#ffffff';
-    // };
+    const doubleclickEvent = (e) => {
+      let clickid = '#' + e.target.id;
+      document.querySelector(clickid).style.strokeWidth = '6';
+      document.querySelector(clickid).style.stroke = '#ffffff';
+      mHistory(`/block`);
+    };
   
     const mouseEventHandle = (e) => {
       console.log(e.target.getAttribute('id'));
@@ -632,6 +635,7 @@ const Karnataka = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Bangalore"
@@ -650,6 +654,7 @@ const Karnataka = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Bangalore Rural"
@@ -668,6 +673,7 @@ const Karnataka = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Belgaum"
@@ -686,6 +692,7 @@ const Karnataka = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Bellary"
@@ -704,6 +711,7 @@ const Karnataka = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Bidar"
@@ -722,6 +730,7 @@ const Karnataka = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Bijapur"
@@ -740,6 +749,7 @@ const Karnataka = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Chamrajnagar"
@@ -758,6 +768,7 @@ const Karnataka = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Chikballapura"
@@ -776,6 +787,7 @@ const Karnataka = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Chikmagalur"
@@ -794,6 +806,7 @@ const Karnataka = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Chitradurga"
@@ -812,6 +825,7 @@ const Karnataka = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Dakshina Kannada"
@@ -830,6 +844,7 @@ const Karnataka = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Davanagere"
@@ -848,6 +863,7 @@ const Karnataka = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Dharwad"
@@ -866,6 +882,7 @@ const Karnataka = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Gadag"
@@ -884,6 +901,7 @@ const Karnataka = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Gulbarga"
@@ -902,6 +920,7 @@ const Karnataka = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Hassan"
@@ -920,6 +939,7 @@ const Karnataka = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Haveri"
@@ -938,6 +958,7 @@ const Karnataka = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Kodagu"
@@ -956,6 +977,7 @@ const Karnataka = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Kolar"
@@ -974,6 +996,7 @@ const Karnataka = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Koppal"
@@ -992,6 +1015,7 @@ const Karnataka = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Mandya"
@@ -1010,6 +1034,7 @@ const Karnataka = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Mysore"
@@ -1028,6 +1053,7 @@ const Karnataka = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Raichur"
@@ -1046,6 +1072,7 @@ const Karnataka = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Ramanagara"
@@ -1064,6 +1091,7 @@ const Karnataka = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Shimoga"
@@ -1082,6 +1110,7 @@ const Karnataka = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Tumkur"
@@ -1100,6 +1129,7 @@ const Karnataka = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Udupi"
@@ -1118,6 +1148,7 @@ const Karnataka = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Uttara_Kannada"
@@ -1136,6 +1167,7 @@ const Karnataka = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Yadgir"
@@ -1154,6 +1186,7 @@ const Karnataka = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <defs>
       <filter id="f1" x="-100%" y="-100%" width="1000%" height="1000%">

@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 
 const Sikkim = (props) => {
+  const mHistory = useNavigate();
     const [state, setstate] = useState('');
 
     const toolTip = document.querySelector('.ToolTip');
@@ -13,11 +15,12 @@ const Sikkim = (props) => {
       document.querySelector(clickid).style.stroke = '#FFF';
     };
   
-    // const doubleclickEvent = (e) => {
-    //   let clickid = '#' + e.target.id;
-    //   document.querySelector(clickid).style.strokeWidth = '6';
-    //   document.querySelector(clickid).style.stroke = '#ffffff';
-    // };
+    const doubleclickEvent = (e) => {
+      let clickid = '#' + e.target.id;
+      document.querySelector(clickid).style.strokeWidth = '6';
+      document.querySelector(clickid).style.stroke = '#ffffff';
+      mHistory(`/block`);
+    };
   
     const mouseEventHandle = (e) => {
       console.log(e.target.getAttribute('id'));
@@ -133,6 +136,7 @@ const Sikkim = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="North Sikkim"
@@ -150,6 +154,7 @@ const Sikkim = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="South Sikkim"
@@ -167,6 +172,7 @@ const Sikkim = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="West Sikkim"
@@ -184,6 +190,7 @@ const Sikkim = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     
     <defs>

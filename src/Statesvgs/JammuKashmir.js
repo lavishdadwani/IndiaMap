@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 
 const JammuKashmir = (props) => {
+  const mHistory = useNavigate();
     const [state, setstate] = useState('');
 
     const toolTip = document.querySelector('.ToolTip');
@@ -13,11 +15,12 @@ const JammuKashmir = (props) => {
       document.querySelector(clickid).style.stroke = '#FFF';
     };
   
-    // const doubleclickEvent = (e) => {
-    //   let clickid = '#' + e.target.id;
-    //   document.querySelector(clickid).style.strokeWidth = '6';
-    //   document.querySelector(clickid).style.stroke = '#ffffff';
-    // };
+    const doubleclickEvent = (e) => {
+      let clickid = '#' + e.target.id;
+      document.querySelector(clickid).style.strokeWidth = '6';
+      document.querySelector(clickid).style.stroke = '#ffffff';
+      mHistory(`/block`);
+    };
   
     const mouseEventHandle = (e) => {
       console.log(e.target.getAttribute('id'));
@@ -458,6 +461,7 @@ const JammuKashmir = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Badgam"
@@ -476,6 +480,7 @@ const JammuKashmir = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Bandipore"
@@ -494,6 +499,7 @@ const JammuKashmir = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Baramulla"
@@ -512,6 +518,7 @@ const JammuKashmir = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Doda"
@@ -530,6 +537,7 @@ const JammuKashmir = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Ganderbal"
@@ -548,6 +556,7 @@ const JammuKashmir = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Jammu"
@@ -566,6 +575,7 @@ const JammuKashmir = (props) => {
       clipPath="none"
        onMouseOut={mouseOutEvent}
           onMouseOver={mouseEventHandle}
+          onDoubleClick={doubleclickEvent}
     />
     <path
       id="Kargil"
@@ -584,6 +594,7 @@ const JammuKashmir = (props) => {
       clipPath="none"
        onMouseOut={mouseOutEvent}
           onMouseOver={mouseEventHandle}
+          onDoubleClick={doubleclickEvent}
     />
     <path
       id="Kathua"
@@ -602,6 +613,7 @@ const JammuKashmir = (props) => {
       clipPath="none"
        onMouseOut={mouseOutEvent}
           onMouseOver={mouseEventHandle}
+          onDoubleClick={doubleclickEvent}
     />
     <path
       id="Kishtwar"
@@ -620,6 +632,7 @@ const JammuKashmir = (props) => {
       clipPath="none"
        onMouseOut={mouseOutEvent}
           onMouseOver={mouseEventHandle}
+          onDoubleClick={doubleclickEvent}
     />
     <path
       id="Kulgam"
@@ -638,6 +651,7 @@ const JammuKashmir = (props) => {
       clipPath="none"
        onMouseOut={mouseOutEvent}
           onMouseOver={mouseEventHandle}
+          onDoubleClick={doubleclickEvent}
     />
     <path
       id="Kupwara"
@@ -656,6 +670,7 @@ const JammuKashmir = (props) => {
       clipPath="none"
        onMouseOut={mouseOutEvent}
           onMouseOver={mouseEventHandle}
+          onDoubleClick={doubleclickEvent}
     />
     <path
       id="Leh (Ladakh)"
@@ -674,6 +689,7 @@ const JammuKashmir = (props) => {
       clipPath="none"
        onMouseOut={mouseOutEvent}
           onMouseOver={mouseEventHandle}
+          onDoubleClick={doubleclickEvent}
     />
     <path
       id="Poonch"
@@ -692,6 +708,7 @@ const JammuKashmir = (props) => {
       clipPath="none"
        onMouseOut={mouseOutEvent}
           onMouseOver={mouseEventHandle}
+          onDoubleClick={doubleclickEvent}
     />
     <path
     id="Pulwama"
@@ -710,6 +727,7 @@ const JammuKashmir = (props) => {
       clipPath="none"
        onMouseOut={mouseOutEvent}
           onMouseOver={mouseEventHandle}
+          onDoubleClick={doubleclickEvent}
     />
     <path
       id="Rajouri"
@@ -728,6 +746,7 @@ const JammuKashmir = (props) => {
       clipPath="none"
        onMouseOut={mouseOutEvent}
           onMouseOver={mouseEventHandle}
+          onDoubleClick={doubleclickEvent}
     />
     <path
       id="Ramban"
@@ -746,6 +765,7 @@ const JammuKashmir = (props) => {
       clipPath="none"
        onMouseOut={mouseOutEvent}
           onMouseOver={mouseEventHandle}
+          onDoubleClick={doubleclickEvent}
     />
     <path
       id="Reasi"
@@ -764,6 +784,7 @@ const JammuKashmir = (props) => {
       clipPath="none"
        onMouseOut={mouseOutEvent}
           onMouseOver={mouseEventHandle}
+          onDoubleClick={doubleclickEvent}
     />
     <path
       id="Samba"
@@ -782,6 +803,7 @@ const JammuKashmir = (props) => {
       clipPath="none"
        onMouseOut={mouseOutEvent}
           onMouseOver={mouseEventHandle}
+          onDoubleClick={doubleclickEvent}
     />
     <path
       id="Shupiyan"
@@ -800,6 +822,7 @@ const JammuKashmir = (props) => {
       clipPath="none"
        onMouseOut={mouseOutEvent}
           onMouseOver={mouseEventHandle}
+          onDoubleClick={doubleclickEvent}
     />
     <path
       id="Srinagar"
@@ -818,6 +841,7 @@ const JammuKashmir = (props) => {
       clipPath="none"
        onMouseOut={mouseOutEvent}
           onMouseOver={mouseEventHandle}
+          onDoubleClick={doubleclickEvent}
     />
     <path
       id="Udhampur"
@@ -836,6 +860,7 @@ const JammuKashmir = (props) => {
       clipPath="none"
        onMouseOut={mouseOutEvent}
           onMouseOver={mouseEventHandle}
+          onDoubleClick={doubleclickEvent}
     />
     <path
       d="M -5 -5 L 89.5156 -5 L 89.5156 115 L -5 115 L -5 -5 Z"

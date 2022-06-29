@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 
 const WestBengal = (props) => {
+  const mHistory = useNavigate();
     const [state, setstate] = useState('');
 
     const toolTip = document.querySelector('.ToolTip');
@@ -13,11 +15,12 @@ const WestBengal = (props) => {
       document.querySelector(clickid).style.stroke = '#FFF';
     };
   
-    // const doubleclickEvent = (e) => {
-    //   let clickid = '#' + e.target.id;
-    //   document.querySelector(clickid).style.strokeWidth = '6';
-    //   document.querySelector(clickid).style.stroke = '#ffffff';
-    // };
+    const doubleclickEvent = (e) => {
+      let clickid = '#' + e.target.id;
+      document.querySelector(clickid).style.strokeWidth = '6';
+      document.querySelector(clickid).style.stroke = '#ffffff';
+      mHistory(`/block`);
+    };
   
     const mouseEventHandle = (e) => {
       console.log(e.target.getAttribute('id'));
@@ -442,6 +445,7 @@ const WestBengal = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Bankura"
@@ -460,6 +464,7 @@ const WestBengal = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Barddhaman"
@@ -478,6 +483,7 @@ const WestBengal = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Birbhum"
@@ -496,6 +502,7 @@ const WestBengal = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Dakshin Dinajpur"
@@ -514,6 +521,7 @@ const WestBengal = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Darjiling"
@@ -532,6 +540,7 @@ const WestBengal = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Haora"
@@ -550,6 +559,7 @@ const WestBengal = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Hugli"
@@ -568,6 +578,7 @@ const WestBengal = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Jalpaiguri"
@@ -586,6 +597,7 @@ const WestBengal = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Koch Bihar"
@@ -604,6 +616,7 @@ const WestBengal = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Kolkata"
@@ -622,6 +635,7 @@ const WestBengal = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Maldah"
@@ -640,6 +654,7 @@ const WestBengal = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Murshidabad"
@@ -658,6 +673,7 @@ const WestBengal = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Nadia"
@@ -676,6 +692,7 @@ const WestBengal = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="North 24 Parganas"
@@ -694,6 +711,7 @@ const WestBengal = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Pashchim Medinipur"
@@ -712,6 +730,7 @@ const WestBengal = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Purba Medinipur"
@@ -730,6 +749,7 @@ const WestBengal = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Puruliya"
@@ -748,6 +768,7 @@ const WestBengal = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="South 24 Parganas"
@@ -766,6 +787,7 @@ const WestBengal = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Uttar Dinajpur"
@@ -784,6 +806,7 @@ const WestBengal = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <defs>
       <filter id="f1" x="-100%" y="-100%" width="1000%" height="1000%">

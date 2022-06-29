@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 
 const Kerala = (props) => {
+  const mHistory = useNavigate();
   const [state, setstate] = useState('');
   const toolTip = document.querySelector('.ToolTip');
   const mouseOutEvent = (e) => {
@@ -12,11 +14,13 @@ const Kerala = (props) => {
     document.querySelector(clickid).style.stroke = '#FFF';
   };
 
-  // const doubleclickEvent = (e) => {
-  //   let clickid = '#' + e.target.id;
-  //   document.querySelector(clickid).style.strokeWidth = '6';
-  //   document.querySelector(clickid).style.stroke = '#ffffff';
-  // };
+  const doubleclickEvent = (e) => {
+    let clickid = '#' + e.target.id;
+    document.querySelector(clickid).style.strokeWidth = '6';
+    document.querySelector(clickid).style.stroke = '#ffffff';
+    mHistory(`/block`);
+  };
+
 
   const mouseEventHandle = (e) => {
     console.log(e.target.getAttribute('id'));
@@ -312,6 +316,7 @@ const Kerala = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Ernakulam"
@@ -329,6 +334,7 @@ const Kerala = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Idukki"
@@ -346,6 +352,7 @@ const Kerala = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Kannur"
@@ -363,6 +370,7 @@ const Kerala = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Kasaragod"
@@ -380,6 +388,7 @@ const Kerala = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Kollam"
@@ -397,6 +406,7 @@ const Kerala = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Kottayam"
@@ -414,6 +424,7 @@ const Kerala = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Kozhikode"
@@ -431,6 +442,7 @@ const Kerala = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Malappuram"
@@ -448,6 +460,7 @@ const Kerala = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Palakkad"
@@ -465,6 +478,7 @@ const Kerala = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Pathanamthitta"
@@ -482,6 +496,7 @@ const Kerala = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Thiruvananthapuram"
@@ -499,6 +514,7 @@ const Kerala = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Thrissur"
@@ -516,6 +532,7 @@ const Kerala = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Wayanad"
@@ -533,6 +550,7 @@ const Kerala = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     {/* <path
       id="Wayanad"

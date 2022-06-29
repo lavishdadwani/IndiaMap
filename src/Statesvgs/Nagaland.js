@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 
 const Nagaland = (props) => {
+  const mHistory = useNavigate();
     const [state, setstate] = useState('');
 
     const toolTip = document.querySelector('.ToolTip');
@@ -13,11 +15,12 @@ const Nagaland = (props) => {
       document.querySelector(clickid).style.stroke = '#FFF';
     };
   
-    // const doubleclickEvent = (e) => {
-    //   let clickid = '#' + e.target.id;
-    //   document.querySelector(clickid).style.strokeWidth = '6';
-    //   document.querySelector(clickid).style.stroke = '#ffffff';
-    // };
+    const doubleclickEvent = (e) => {
+      let clickid = '#' + e.target.id;
+      document.querySelector(clickid).style.strokeWidth = '6';
+      document.querySelector(clickid).style.stroke = '#ffffff';
+      mHistory(`/block`);
+    };
   
     const mouseEventHandle = (e) => {
       console.log(e.target.getAttribute('id'));
@@ -259,6 +262,7 @@ const Nagaland = (props) => {
       clipPath="none"
        onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Kiphire"
@@ -276,6 +280,7 @@ const Nagaland = (props) => {
       clipPath="none"
        onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Kohima"
@@ -293,6 +298,7 @@ const Nagaland = (props) => {
       clipPath="none"
        onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Longleng"
@@ -310,6 +316,7 @@ const Nagaland = (props) => {
       clipPath="none"
        onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Mokokchung"
@@ -327,6 +334,7 @@ const Nagaland = (props) => {
       clipPath="none"
        onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Mon"
@@ -344,6 +352,7 @@ const Nagaland = (props) => {
       clipPath="none"
        onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Peren"
@@ -361,6 +370,7 @@ const Nagaland = (props) => {
       clipPath="none"
        onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Phek"
@@ -378,6 +388,7 @@ const Nagaland = (props) => {
       clipPath="none"
        onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Tuensang"
@@ -395,6 +406,7 @@ const Nagaland = (props) => {
       clipPath="none"
        onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Wokha"
@@ -412,6 +424,7 @@ const Nagaland = (props) => {
       clipPath="none"
        onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Zunheboto"
@@ -429,6 +442,7 @@ const Nagaland = (props) => {
       clipPath="none"
        onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     
     <defs>
