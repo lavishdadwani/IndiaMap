@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 
 const Gujarat = (props) => {
+  const mHistory = useNavigate();
   const [state, setstate] = useState('');
 
   const toolTip = document.querySelector('.ToolTip');
@@ -14,11 +16,13 @@ const Gujarat = (props) => {
     document.querySelector(clickid).style.stroke = '#1f1e1d';
   };
 
-  // const doubleclickEvent = (e) => {
-  //   let clickid = '#' + e.target.id;
-  //   document.querySelector(clickid).style.strokeWidth = '6';
-  //   document.querySelector(clickid).style.stroke = '#ffffff';
-  // };
+  const doubleclickEvent = (e) => {
+    let clickid = '#' + e.target.id;
+    document.querySelector(clickid).style.strokeWidth = '6';
+    document.querySelector(clickid).style.stroke = '#ffffff';
+    mHistory(`/block`);
+  };
+
 
   const mouseEventHandle = (e) => {
     console.log(e.target.getAttribute('id'));
@@ -304,6 +308,7 @@ const Gujarat = (props) => {
             inkscapeConnector-curvature={0}
             onMouseOut={mouseOutEvent}
             onMouseOver={mouseEventHandle}
+             onDoubleClick={doubleclickEvent}
           />
           <path
             style={{
@@ -328,6 +333,7 @@ const Gujarat = (props) => {
             inkscapeConnector-curvature={0}
             onMouseOut={mouseOutEvent}
             onMouseOver={mouseEventHandle}
+             onDoubleClick={doubleclickEvent}
           />
           <path
             style={{
@@ -352,6 +358,7 @@ const Gujarat = (props) => {
             inkscapeConnector-curvature={0}
             onMouseOut={mouseOutEvent}
             onMouseOver={mouseEventHandle}
+             onDoubleClick={doubleclickEvent}
           />
           <path
             style={{
@@ -377,6 +384,7 @@ const Gujarat = (props) => {
             inkscapeLabel="#Ahmedabad"
             onMouseOut={mouseOutEvent}
             onMouseOver={mouseEventHandle}
+             onDoubleClick={doubleclickEvent}
           />
           <path
             style={{
@@ -402,6 +410,7 @@ const Gujarat = (props) => {
             dLabel="#Vadodara"
             onMouseOut={mouseOutEvent}
             onMouseOver={mouseEventHandle}
+             onDoubleClick={doubleclickEvent}
           />
           <path
             style={{
@@ -426,6 +435,7 @@ const Gujarat = (props) => {
             dConnector-curvature={0}
             onMouseOut={mouseOutEvent}
             onMouseOver={mouseEventHandle}
+             onDoubleClick={doubleclickEvent}
           />
           <path
             style={{
@@ -450,6 +460,7 @@ const Gujarat = (props) => {
             dConnector-curvature={0}
             onMouseOut={mouseOutEvent}
             onMouseOver={mouseEventHandle}
+             onDoubleClick={doubleclickEvent}
           />
           <path
             style={{
@@ -474,6 +485,7 @@ const Gujarat = (props) => {
             dConnector-curvature={0}
             onMouseOut={mouseOutEvent}
             onMouseOver={mouseEventHandle}
+             onDoubleClick={doubleclickEvent}
           />
           <path
             style={{
@@ -498,6 +510,7 @@ const Gujarat = (props) => {
             dConnector-curvature={0}
             onMouseOut={mouseOutEvent}
             onMouseOver={mouseEventHandle}
+             onDoubleClick={doubleclickEvent}
           />
           <path
             style={{
@@ -522,6 +535,7 @@ const Gujarat = (props) => {
             dConnector-curvature={0}
             onMouseOut={mouseOutEvent}
             onMouseOver={mouseEventHandle}
+             onDoubleClick={doubleclickEvent}
           />
           <path
             style={{
@@ -546,6 +560,7 @@ const Gujarat = (props) => {
             dConnector-curvature={0}
             onMouseOut={mouseOutEvent}
             onMouseOver={mouseEventHandle}
+             onDoubleClick={doubleclickEvent}
           />
           <path
             style={{
@@ -636,6 +651,7 @@ const Gujarat = (props) => {
             dConnector-curvature={0}
             onMouseOut={mouseOutEvent}
             onMouseOver={mouseEventHandle}
+             onDoubleClick={doubleclickEvent}
           />
           <path
             style={{
@@ -704,6 +720,7 @@ const Gujarat = (props) => {
             dConnector-curvature={0}
             onMouseOut={mouseOutEvent}
             onMouseOver={mouseEventHandle}
+             onDoubleClick={doubleclickEvent}
           />
           <path
             style={{
@@ -728,6 +745,7 @@ const Gujarat = (props) => {
             dConnector-curvature={0}
             onMouseOut={mouseOutEvent}
             onMouseOver={mouseEventHandle}
+             onDoubleClick={doubleclickEvent}
           />
           <path
             style={{
@@ -752,6 +770,7 @@ const Gujarat = (props) => {
             dConnector-curvature={0}
             onMouseOut={mouseOutEvent}
             onMouseOver={mouseEventHandle}
+             onDoubleClick={doubleclickEvent}
           />
           <path
             style={{
@@ -776,6 +795,7 @@ const Gujarat = (props) => {
             dConnector-curvature={0}
             onMouseOut={mouseOutEvent}
             onMouseOver={mouseEventHandle}
+             onDoubleClick={doubleclickEvent}
           />
           <path
             style={{
@@ -800,6 +820,7 @@ const Gujarat = (props) => {
             dConnector-curvature={0}
             onMouseOut={mouseOutEvent}
             onMouseOver={mouseEventHandle}
+             onDoubleClick={doubleclickEvent}
           />
           <path
             style={{
@@ -824,6 +845,7 @@ const Gujarat = (props) => {
             dConnector-curvature={0}
             onMouseOut={mouseOutEvent}
             onMouseOver={mouseEventHandle}
+             onDoubleClick={doubleclickEvent}
           />
           <path
             style={{
@@ -848,6 +870,7 @@ const Gujarat = (props) => {
             dConnector-curvature={0}
             onMouseOut={mouseOutEvent}
             onMouseOver={mouseEventHandle}
+             onDoubleClick={doubleclickEvent}
           />
           <path
             style={{
@@ -872,6 +895,7 @@ const Gujarat = (props) => {
             dConnector-curvature={0}
             onMouseOut={mouseOutEvent}
             onMouseOver={mouseEventHandle}
+             onDoubleClick={doubleclickEvent}
           />
           <path
             style={{
@@ -896,6 +920,7 @@ const Gujarat = (props) => {
             dConnector-curvature={0}
             onMouseOut={mouseOutEvent}
             onMouseOver={mouseEventHandle}
+             onDoubleClick={doubleclickEvent}
           />
           <path
             style={{
@@ -920,6 +945,7 @@ const Gujarat = (props) => {
             dConnector-curvature={0}
             onMouseOut={mouseOutEvent}
             onMouseOver={mouseEventHandle}
+             onDoubleClick={doubleclickEvent}
           />
           <path
             style={{
@@ -944,6 +970,7 @@ const Gujarat = (props) => {
             dConnector-curvature={0}
             onMouseOut={mouseOutEvent}
             onMouseOver={mouseEventHandle}
+             onDoubleClick={doubleclickEvent}
           />
           <path
             style={{
@@ -968,6 +995,7 @@ const Gujarat = (props) => {
             dConnector-curvature={0}
             onMouseOut={mouseOutEvent}
             onMouseOver={mouseEventHandle}
+             onDoubleClick={doubleclickEvent}
           />
           <path
             style={{
@@ -992,6 +1020,7 @@ const Gujarat = (props) => {
             dConnector-curvature={0}
             onMouseOut={mouseOutEvent}
             onMouseOver={mouseEventHandle}
+             onDoubleClick={doubleclickEvent}
           />
           <path
             style={{
@@ -1016,6 +1045,7 @@ const Gujarat = (props) => {
             dConnector-curvature={0}
             onMouseOut={mouseOutEvent}
             onMouseOver={mouseEventHandle}
+             onDoubleClick={doubleclickEvent}
           />
           <path
             style={{
@@ -1040,6 +1070,7 @@ const Gujarat = (props) => {
             dConnector-curvature={0}
             onMouseOut={mouseOutEvent}
             onMouseOver={mouseEventHandle}
+             onDoubleClick={doubleclickEvent}
           />
           <path
             style={{
@@ -1064,6 +1095,7 @@ const Gujarat = (props) => {
             dConnector-curvature={0}
             onMouseOut={mouseOutEvent}
             onMouseOver={mouseEventHandle}
+             onDoubleClick={doubleclickEvent}
           />
           <path
             style={{
@@ -1088,6 +1120,7 @@ const Gujarat = (props) => {
             dConnector-curvature={0}
             onMouseOut={mouseOutEvent}
             onMouseOver={mouseEventHandle}
+             onDoubleClick={doubleclickEvent}
           />
           <path
             style={{
@@ -1112,6 +1145,7 @@ const Gujarat = (props) => {
             dConnector-curvature={0}
             onMouseOut={mouseOutEvent}
             onMouseOver={mouseEventHandle}
+             onDoubleClick={doubleclickEvent}
           />
           <path
             style={{
@@ -1136,6 +1170,7 @@ const Gujarat = (props) => {
             dConnector-curvature={0}
             onMouseOut={mouseOutEvent}
             onMouseOver={mouseEventHandle}
+             onDoubleClick={doubleclickEvent}
           />
           <path
             style={{
@@ -2553,6 +2588,7 @@ const Gujarat = (props) => {
             inkscapeConnector-curvature={0}
             onMouseOut={mouseOutEvent}
             onMouseOver={mouseEventHandle}
+             onDoubleClick={doubleclickEvent}
           />
         </g>
       </svg>

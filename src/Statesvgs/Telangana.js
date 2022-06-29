@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 
 const Telangana = (props) => {
+  const mHistory = useNavigate();
     const [state, setstate] = useState('');
 
     const toolTip = document.querySelector('.ToolTip');
@@ -13,11 +15,13 @@ const Telangana = (props) => {
       document.querySelector(clickid).style.stroke = '#FFF';
     };
   
-    // const doubleclickEvent = (e) => {
-    //   let clickid = '#' + e.target.id;
-    //   document.querySelector(clickid).style.strokeWidth = '6';
-    //   document.querySelector(clickid).style.stroke = '#ffffff';
-    // };
+    const doubleclickEvent = (e) => {
+      let clickid = '#' + e.target.id;
+      document.querySelector(clickid).style.strokeWidth = '6';
+      document.querySelector(clickid).style.stroke = '#ffffff';
+      mHistory(`/block`);
+    };
+  
   
     const mouseEventHandle = (e) => {
       console.log(e.target.getAttribute('id'));
@@ -241,6 +245,7 @@ const Telangana = (props) => {
       clipPath="none"
        onMouseOut={mouseOutEvent}
         onMouseOver={mouseEventHandle}
+         onDoubleClick={doubleclickEvent}
     />
     <path
       id="Hyderabad"
@@ -258,6 +263,7 @@ const Telangana = (props) => {
       clipPath="none"
        onMouseOut={mouseOutEvent}
         onMouseOver={mouseEventHandle}
+         onDoubleClick={doubleclickEvent}
     />
     <path
       id="Karimnagar"
@@ -275,6 +281,7 @@ const Telangana = (props) => {
       clipPath="none"
        onMouseOut={mouseOutEvent}
         onMouseOver={mouseEventHandle}
+         onDoubleClick={doubleclickEvent}
     />
     <path
       id="Khammam"
@@ -292,6 +299,7 @@ const Telangana = (props) => {
       clipPath="none"
        onMouseOut={mouseOutEvent}
         onMouseOver={mouseEventHandle}
+         onDoubleClick={doubleclickEvent}
     />
     <path
       id="Mahbubnagar"
@@ -309,6 +317,7 @@ const Telangana = (props) => {
       clipPath="none"
        onMouseOut={mouseOutEvent}
         onMouseOver={mouseEventHandle}
+         onDoubleClick={doubleclickEvent}
     />
     <path
       id="Medak"
@@ -326,6 +335,7 @@ const Telangana = (props) => {
       clipPath="none"
        onMouseOut={mouseOutEvent}
         onMouseOver={mouseEventHandle}
+         onDoubleClick={doubleclickEvent}
     />
     <path
       id="Nalgonda"
@@ -343,6 +353,7 @@ const Telangana = (props) => {
       clipPath="none"
        onMouseOut={mouseOutEvent}
         onMouseOver={mouseEventHandle}
+         onDoubleClick={doubleclickEvent}
     />
     <path
       id="Nizamabad"
@@ -360,6 +371,7 @@ const Telangana = (props) => {
       clipPath="none"
        onMouseOut={mouseOutEvent}
         onMouseOver={mouseEventHandle}
+         onDoubleClick={doubleclickEvent}
     />
     <path
       id="Ranga Reddy"
@@ -377,6 +389,7 @@ const Telangana = (props) => {
       clipPath="none"
        onMouseOut={mouseOutEvent}
         onMouseOver={mouseEventHandle}
+         onDoubleClick={doubleclickEvent}
     />
     <path
       id="Warangal"
@@ -394,6 +407,7 @@ const Telangana = (props) => {
       clipPath="none"
        onMouseOut={mouseOutEvent}
         onMouseOver={mouseEventHandle}
+         onDoubleClick={doubleclickEvent}
     />
     
     <defs>

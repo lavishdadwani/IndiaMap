@@ -1,5 +1,7 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 const Bihar = (props) => {
+  const mHistory = useNavigate();
   const [state, setstate] = useState('');
 
   const toolTip = document.querySelector('.ToolTip');
@@ -12,11 +14,13 @@ const Bihar = (props) => {
     document.querySelector(clickid).style.stroke = '#FFF';
   };
 
-  // const doubleclickEvent = (e) => {
-  //   let clickid = '#' + e.target.id;
-  //   document.querySelector(clickid).style.strokeWidth = '6';
-  //   document.querySelector(clickid).style.stroke = '#ffffff';
-  // };
+  const doubleclickEvent = (e) => {
+    let clickid = '#' + e.target.id;
+    document.querySelector(clickid).style.strokeWidth = '6';
+    document.querySelector(clickid).style.stroke = '#ffffff';
+    mHistory(`/block`);
+  };
+
 
   const mouseEventHandle = (e) => {
     console.log(e.target.getAttribute('id'));
@@ -59,6 +63,7 @@ const Bihar = (props) => {
       style={{ filter: "url(#f1)" }}
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
      id="Arwal"
@@ -77,6 +82,7 @@ const Bihar = (props) => {
       style={{ filter: "url(#f1)" }}
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id=""
@@ -644,6 +650,7 @@ const Bihar = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Arwal"
@@ -661,6 +668,7 @@ const Bihar = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Aurangabad"
@@ -678,6 +686,7 @@ const Bihar = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Banka"
@@ -695,6 +704,7 @@ const Bihar = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Begusarai"
@@ -712,6 +722,7 @@ const Bihar = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Bhagalpur"
@@ -729,6 +740,7 @@ const Bihar = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Bhojpur"
@@ -746,6 +758,7 @@ const Bihar = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Buxar"
@@ -763,6 +776,7 @@ const Bihar = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Darbhanga"
@@ -780,6 +794,7 @@ const Bihar = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Gaya"
@@ -797,6 +812,7 @@ const Bihar = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Gopalganj"
@@ -814,6 +830,7 @@ const Bihar = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Jamui"
@@ -831,6 +848,7 @@ const Bihar = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
      id="Jehanabad"
@@ -848,6 +866,7 @@ const Bihar = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Kaimur"
@@ -865,6 +884,7 @@ const Bihar = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Katihar"
@@ -882,6 +902,7 @@ const Bihar = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Khagaria"
@@ -899,6 +920,7 @@ const Bihar = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Kishanganj"
@@ -916,6 +938,7 @@ const Bihar = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Lakhisarai"
@@ -933,6 +956,7 @@ const Bihar = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Madhepura"
@@ -950,6 +974,7 @@ const Bihar = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Madhubani"
@@ -967,6 +992,7 @@ const Bihar = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Munger"
@@ -984,6 +1010,7 @@ const Bihar = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Muzaffarpur"
@@ -1001,6 +1028,7 @@ const Bihar = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Nalanda"
@@ -1018,6 +1046,7 @@ const Bihar = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Nawada"
@@ -1035,6 +1064,7 @@ const Bihar = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Pashchim_Champaran"
@@ -1052,6 +1082,7 @@ const Bihar = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Patna"
@@ -1069,6 +1100,7 @@ const Bihar = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Purba Champaran"
@@ -1086,6 +1118,7 @@ const Bihar = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Purnia"
@@ -1103,6 +1136,7 @@ const Bihar = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Rohtas"
@@ -1120,6 +1154,7 @@ const Bihar = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Saharsa"
@@ -1137,6 +1172,7 @@ const Bihar = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Samastipur"
@@ -1154,6 +1190,7 @@ const Bihar = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Saran"
@@ -1171,6 +1208,7 @@ const Bihar = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       d="M 427.5392 421.3982 L 427.7774 421.196 L 427.6004 421.1321 L 427.6419 420.8483 L 427.3827 420.2858 L 425.9843 420.8243 L 425.5516 421.1909 L 424.9289 422.4931 L 424.5917 422.9692 L 424.0433 422.4434 L 423.4774 422.0921 L 423.6172 421.7762 L 423.2064 420.9743 L 422.7833 420.7478 L 422.3455 419.2305 L 422.4359 418.7646 L 421.7418 418.5626 L 421.3725 418.5638 L 421.0783 418.9251 L 421.0047 419.228 L 421.3055 420.4691 L 420.8845 420.4679 L 420.6187 420.7019 L 419.9719 420.5594 L 419.6092 420.2732 L 419.4563 419.2382 L 419.4519 419.0918 L 418.8561 418.458 L 418.9705 417.2055 L 420.4053 417.2577 L 421.0855 417.1865 L 421.3456 416.9996 L 421.465 416.6007 L 421.3907 416.3016 L 420.9799 416.1861 L 420.8321 415.92 L 420.9799 415.491 L 420.819 414.8214 L 421.189 413.8413 L 421.0783 413.1846 L 421.0732 411.9678 L 421.4577 410.9533 L 421.1424 409.7222 L 421.138 409.2223 L 421.7192 409.072 L 421.4592 408.2932 L 421.7461 407.6476 L 421.3623 407.1669 L 420.7891 406.7821 L 420.0754 406.5187 L 420.0047 405.8504 L 419.6354 405.6761 L 419.3958 405.9701 L 418.8532 406.9567 L 418.3419 407.1449 L 417.7476 407.1563 L 417.1366 407.2963 L 416.7229 407.7013 L 415.8176 406.9501 L 415.4803 406.9016 L 415.1504 406.7367 L 414.728 406.9261 L 414.4563 407.2507 L 414.2196 406.795 L 414.2852 406.3201 L 414.1329 405.8174 L 413.0667 405.1478 L 412.6282 405.3464 L 411.9123 406.0961 L 411.5831 406.1177 L 411.2211 405.9383 L 410.819 405.8861 L 410.3464 406.1318 L 409.7229 406.2247 L 408.7426 406.912 L 406.8773 404.7664 L 406.3435 404.7419 L 405.9749 405.0092 L 405.6931 405.695 L 405.4433 405.9803 L 405.2524 405.7525 L 405.2262 405.1772 L 405.4615 403.0922 L 407.1454 402.6875 L 407.9181 402.7004 L 410.1337 403.7183 L 410.8766 403.7021 L 411.4294 403.5173 L 413.2021 402.2648 L 413.3842 400.6115 L 413.6865 399.2316 L 414.0565 398.5863 L 414.5204 398.4935 L 414.7484 398.2211 L 414.5758 397.7106 L 414.023 397.7718 L 413.964 396.6897 L 414.0579 395.0923 L 414.5619 395.1532 L 414.8875 395.3217 L 415.9661 395.3532 L 416.3376 395.4627 L 416.3849 394.7016 L 416.6318 394.2168 L 417.0987 394.3821 L 417.2101 393.9583 L 417.1162 393.3307 L 416.7352 392.8315 L 416.7382 391.6429 L 416.3208 391.0381 L 414.3944 389.8978 L 414.3492 388.471 L 414.4774 387.0493 L 414.3857 385.6352 L 414.5692 385.1795 L 415.9654 384.8384 L 416.7061 384.3599 L 417.1577 384.1904 L 417.6675 384.3254 L 417.8882 384.716 L 417.9108 385.9139 L 418.7513 386.1596 L 420.0484 386.2346 L 420.2975 385.7587 L 421.2152 385.9901 L 421.1562 388.3705 L 421.7476 388.4074 L 422.1657 388.3348 L 423.1569 387.5635 L 423.2428 387.9415 L 422.7097 389.6713 L 422.6573 390.7165 L 422.7199 391.8213 L 423.3455 391.7118 L 423.5699 391.5361 L 423.599 391.0663 L 423.9501 390.3093 L 424.3069 390.3499 L 425.1576 390.7813 L 425.6099 390.8056 L 425.8175 391.5858 L 426.2202 391.8301 L 426.7192 391.7767 L 427.1824 391.2125 L 427.3207 390.2086 L 427.6711 389.9362 L 427.969 389.086 L 429.1081 388.7165 L 429.7009 388.7536 L 430.2981 388.6672 L 430.6164 389.0321 L 431.0061 389.1508 L 431.1445 389.9311 L 432.0512 390.3217 L 432.7701 390.3882 L 434.0956 390.0202 L 434.4576 389.7463 L 435.9201 388.4803 L 435.883 388.7575 L 435.9543 389.128 L 435.95 389.9527 L 436.1881 390.649 L 436.486 391.1848 L 436.5916 391.8811 L 439.2697 396.5232 L 439.6484 397.3722 L 439.7518 398.3661 L 439.4649 400.3517 L 438.8757 402.5207 L 438.781 403.6064 L 438.7256 404.6146 L 438.8727 405.4202 L 438.8742 406.2706 L 438.2886 407.3971 L 438.1095 408.8329 L 438.4758 409.7557 L 438.5639 410.3997 L 438.2617 410.8144 L 438.0206 411.4867 L 437.3433 411.4575 L 436.8902 411.2742 L 435.427 412.1931 L 434.8866 412.6767 L 434.0986 414.4155 L 433.4103 414.2511 L 433.0432 414.0717 L 432.5472 414.9081 L 432.6601 415.9744 L 432.5283 417.0159 L 432.3193 419.2547 L 431.9879 420.1406 L 431.4467 420.7859 L 430.6849 420.7388 L 430.2064 420.5798 L 429.9143 421.1384 L 429.2566 421.4339 L 427.5392 421.3982 Z"
@@ -1202,6 +1240,7 @@ const Bihar = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Sitamarhi"
@@ -1219,6 +1258,7 @@ const Bihar = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Siwan"
@@ -1236,6 +1276,7 @@ const Bihar = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Supaul"
@@ -1253,6 +1294,7 @@ const Bihar = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       id="Vaishali"
@@ -1270,6 +1312,7 @@ const Bihar = (props) => {
       clipPath="none"
       onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+      onDoubleClick={doubleclickEvent}
     />
     <path
       d="M -5 -5 L 103.5898 -5 L 103.5898 115 L -5 115 L -5 -5 Z"
