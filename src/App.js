@@ -5,6 +5,7 @@ import 'bootstrap/dist/js/bootstrap.bundle';
 import 'react-bootstrap';
 import StateMap from './Mycomponants/StateMap'
 import {Route, Routes } from 'react-router-dom';
+import Block from './Mycomponants/Block';
 
 const App = () => {
   return (
@@ -12,6 +13,7 @@ const App = () => {
      <Routes>
         <Route exact path="/IndiaMap" element={<IndiaMap/>}/>
         <Route exact path="/StateRoute/:id" element={<StateMap/>}/>
+        <Route exact path="/block" element={<Block/>}/>
     </Routes>
     </>
   )

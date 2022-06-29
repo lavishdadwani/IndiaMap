@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 
 const Mizoram = (props) => {
+  const mHistory = useNavigate();
     const [state, setstate] = useState('');
 
     const toolTip = document.querySelector('.ToolTip');
@@ -13,11 +15,13 @@ const Mizoram = (props) => {
       document.querySelector(clickid).style.stroke = '#FFF';
     };
   
-    // const doubleclickEvent = (e) => {
-    //   let clickid = '#' + e.target.id;
-    //   document.querySelector(clickid).style.strokeWidth = '6';
-    //   document.querySelector(clickid).style.stroke = '#ffffff';
-    // };
+    const doubleclickEvent = (e) => {
+      let clickid = '#' + e.target.id;
+      document.querySelector(clickid).style.strokeWidth = '6';
+      document.querySelector(clickid).style.stroke = '#ffffff';
+      mHistory(`/block`);
+    };
+  
   
     const mouseEventHandle = (e) => {
       console.log(e.target.getAttribute('id'));
@@ -205,6 +209,7 @@ const Mizoram = (props) => {
       clipPath="none"
        onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+       onDoubleClick={doubleclickEvent}
     />
     <path
       id="Champhai"
@@ -222,6 +227,7 @@ const Mizoram = (props) => {
       clipPath="none"
        onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+       onDoubleClick={doubleclickEvent}
     />
     <path
       id="Kolasib"
@@ -239,6 +245,7 @@ const Mizoram = (props) => {
       clipPath="none"
        onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+       onDoubleClick={doubleclickEvent}
     />
     <path
       id="Lawangtlai"
@@ -256,6 +263,7 @@ const Mizoram = (props) => {
       clipPath="none"
        onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+       onDoubleClick={doubleclickEvent}
     />
     <path
       id="Lunglei"
@@ -273,6 +281,7 @@ const Mizoram = (props) => {
       clipPath="none"
        onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+       onDoubleClick={doubleclickEvent}
     />
     <path
       id="Mamit"
@@ -290,6 +299,7 @@ const Mizoram = (props) => {
       clipPath="none"
        onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+       onDoubleClick={doubleclickEvent}
     />
     <path
       id="Saiha"
@@ -307,6 +317,7 @@ const Mizoram = (props) => {
       clipPath="none"
        onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+       onDoubleClick={doubleclickEvent}
     />
     <path
       id="Serchhip"
@@ -324,6 +335,7 @@ const Mizoram = (props) => {
       clipPath="none"
        onMouseOut={mouseOutEvent}
       onMouseOver={mouseEventHandle}
+       onDoubleClick={doubleclickEvent}
     />
     <defs>
       <filter id="f1" x="-100%" y="-100%" width="1000%" height="1000%">
