@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import "../Styles/IndiaMap.css"
 
 const MaharashtraSvg = () => {
+  const mHistory = useNavigate();
     const [state, setstate] = useState('');
 
     const toolTip = document.querySelector('.ToolTip');
@@ -15,11 +17,13 @@ const MaharashtraSvg = () => {
       document.querySelector(clickid).style.stroke = '#FFF';
     };
   
-    // const doubleclickEvent = (e) => {
-    //   let clickid = '#' + e.target.id;
-    //   document.querySelector(clickid).style.strokeWidth = '6';
-    //   document.querySelector(clickid).style.stroke = '#ffffff';
-    // };
+    const doubleclickEvent = (e) => {
+      let clickid = '#' + e.target.id;
+      document.querySelector(clickid).style.strokeWidth = '6';
+      document.querySelector(clickid).style.stroke = '#ffffff';
+      mHistory(`/block`);
+    };
+  
   
     const mouseEventHandle = (e) => {
       console.log(e.target.getAttribute('id'));
@@ -89,6 +93,7 @@ const MaharashtraSvg = () => {
             inkscapeConnector-curvature={0}
             onMouseOut={mouseOutEvent}
             onMouseOver={mouseEventHandle}
+             onDoubleClick={doubleclickEvent}
               
              
             >
@@ -123,6 +128,7 @@ const MaharashtraSvg = () => {
             }}
             onMouseOut={mouseOutEvent}
             onMouseOver={mouseEventHandle}
+             onDoubleClick={doubleclickEvent}
              
             >
               {/* <title>Name -{{ title }} Farmers -{{ farmers_count }}</title> */}
@@ -156,6 +162,7 @@ const MaharashtraSvg = () => {
             }}
             onMouseOut={mouseOutEvent}
             onMouseOver={mouseEventHandle}
+             onDoubleClick={doubleclickEvent}
              
             >
               {/* <title>Name -{{ title }} Farmers -{{ farmers_count }}</title> */}
@@ -189,6 +196,7 @@ const MaharashtraSvg = () => {
             }}
             onMouseOut={mouseOutEvent}
             onMouseOver={mouseEventHandle}
+             onDoubleClick={doubleclickEvent}
              
             >
               {/* <title>Name -{{ title }} Farmers -{{ farmers_count }}</title> */}
@@ -222,6 +230,7 @@ const MaharashtraSvg = () => {
             }}
             onMouseOut={mouseOutEvent}
             onMouseOver={mouseEventHandle}
+             onDoubleClick={doubleclickEvent}
              
             >
               {/* <title>Name -{{ title }} Farmers -{{ farmers_count }}</title> */}
@@ -255,6 +264,7 @@ const MaharashtraSvg = () => {
             }}
             onMouseOut={mouseOutEvent}
             onMouseOver={mouseEventHandle}
+             onDoubleClick={doubleclickEvent}
              
             >
               {/* <title>Name -{{ title }} Farmers -{{ farmers_count }}</title> */}
@@ -288,6 +298,7 @@ const MaharashtraSvg = () => {
             }}
             onMouseOut={mouseOutEvent}
             onMouseOver={mouseEventHandle}
+             onDoubleClick={doubleclickEvent}
              
             >
               {/* <title>Name -{{ title }} Farmers -{{ farmers_count }}</title> */}
@@ -321,6 +332,7 @@ const MaharashtraSvg = () => {
             }}
             onMouseOut={mouseOutEvent}
             onMouseOver={mouseEventHandle}
+             onDoubleClick={doubleclickEvent}
              
             >
               {/* <title>Name -{{ title }} Farmers -{{ farmers_count }}</title> */}
@@ -354,6 +366,7 @@ const MaharashtraSvg = () => {
             }}
             onMouseOut={mouseOutEvent}
             onMouseOver={mouseEventHandle}
+             onDoubleClick={doubleclickEvent}
              
             >
               {/* <title>Name -{{ title }} Farmers -{{ farmers_count }}</title> */}
@@ -387,6 +400,7 @@ const MaharashtraSvg = () => {
             }}
             onMouseOut={mouseOutEvent}
             onMouseOver={mouseEventHandle}
+             onDoubleClick={doubleclickEvent}
              
             >
               {/* <title>Name -{{ title }} Farmers -{{ farmers_count }}</title> */}
@@ -420,6 +434,7 @@ const MaharashtraSvg = () => {
             }}
             onMouseOut={mouseOutEvent}
             onMouseOver={mouseEventHandle}
+             onDoubleClick={doubleclickEvent}
              
             >
               {/* <title>Name -{{ title }} Farmers -{{ farmers_count }}</title> */}
@@ -453,6 +468,7 @@ const MaharashtraSvg = () => {
             }}
             onMouseOut={mouseOutEvent}
             onMouseOver={mouseEventHandle}
+             onDoubleClick={doubleclickEvent}
              
             >
               {/* <title>Name -{{ title }} Farmers -{{ farmers_count }}</title> */}
@@ -486,6 +502,7 @@ const MaharashtraSvg = () => {
             }}
             onMouseOut={mouseOutEvent}
             onMouseOver={mouseEventHandle}
+             onDoubleClick={doubleclickEvent}
              
             >
               {/* <title>Name -{{ title }} Farmers -{{ farmers_count }}</title> */}
@@ -519,6 +536,7 @@ const MaharashtraSvg = () => {
             }}
             onMouseOut={mouseOutEvent}
             onMouseOver={mouseEventHandle}
+             onDoubleClick={doubleclickEvent}
              
             >
               {/* <title>Name -{{ title }} Farmers -{{ farmers_count }}</title> */}
@@ -552,6 +570,7 @@ const MaharashtraSvg = () => {
             }}
             onMouseOut={mouseOutEvent}
             onMouseOver={mouseEventHandle}
+             onDoubleClick={doubleclickEvent}
              
             >
               {/* <title>Name -{{ title }} Farmers -{{ farmers_count }}</title> */}
@@ -585,6 +604,7 @@ const MaharashtraSvg = () => {
             }}
             onMouseOut={mouseOutEvent}
             onMouseOver={mouseEventHandle}
+             onDoubleClick={doubleclickEvent}
              
             >
               {/* <title>Name -{{ title }} Farmers -{{ farmers_count }}</title> */}
@@ -618,6 +638,7 @@ const MaharashtraSvg = () => {
             }}
             onMouseOut={mouseOutEvent}
             onMouseOver={mouseEventHandle}
+             onDoubleClick={doubleclickEvent}
              
             >
               {/* <title>Name -{{ title }} Farmers -{{ farmers_count }}</title> */}
@@ -651,6 +672,7 @@ const MaharashtraSvg = () => {
             }}
             onMouseOut={mouseOutEvent}
             onMouseOver={mouseEventHandle}
+             onDoubleClick={doubleclickEvent}
              
             >
               {/* <title>Name -{{ title }} Farmers -{{ farmers_count }}</title> */}
@@ -684,6 +706,7 @@ const MaharashtraSvg = () => {
             }}
             onMouseOut={mouseOutEvent}
             onMouseOver={mouseEventHandle}
+             onDoubleClick={doubleclickEvent}
              
             >
               {/* <title>Name -{{ title }} Farmers -{{ farmers_count }}</title> */}
@@ -714,9 +737,10 @@ const MaharashtraSvg = () => {
               verticalAlign: 'baseline',
               width: 'auto',
             }}
-              tit
+              title="Latur"
               onMouseOut={mouseOutEvent}
-            onMouseOver={mouseEventHandle}le="Latur"
+            onMouseOver={mouseEventHandle}
+             onDoubleClick={doubleclickEvent}
              
             >
               {/* <title>Name -{{ title }} Farmers -{{ farmers_count }}</title> */}
@@ -747,9 +771,10 @@ const MaharashtraSvg = () => {
               verticalAlign: 'baseline',
               width: 'auto',
             }}
-              tit
+              title="Osmanabad"
               onMouseOut={mouseOutEvent}
-            onMouseOver={mouseEventHandle}le="Osmanabad"
+            onMouseOver={mouseEventHandle}
+             onDoubleClick={doubleclickEvent}
              
             >
               {/* <title>Name -{{ title }} Farmers -{{ farmers_count }}</title> */}
@@ -780,9 +805,10 @@ const MaharashtraSvg = () => {
               verticalAlign: 'baseline',
               width: 'auto',
             }}
-              tit
+              title="Solapur"
               onMouseOut={mouseOutEvent}
-            onMouseOver={mouseEventHandle}le="Solapur"
+            onMouseOver={mouseEventHandle}
+             onDoubleClick={doubleclickEvent}
              
             >
               {/* <title>Name -{{ title }} Farmers -{{ farmers_count }}</title> */}
@@ -813,9 +839,10 @@ const MaharashtraSvg = () => {
               verticalAlign: 'baseline',
               width: 'auto',
             }}
-              tit
+              title="Satara"
               onMouseOut={mouseOutEvent}
-            onMouseOver={mouseEventHandle}le="Satara"
+            onMouseOver={mouseEventHandle}
+             onDoubleClick={doubleclickEvent}
              
             >
               {/* <title>Name -{{ title }} Farmers -{{ farmers_count }}</title> */}
@@ -846,9 +873,10 @@ const MaharashtraSvg = () => {
               verticalAlign: 'baseline',
               width: 'auto',
             }}
-              tit
+              title="Ratnagiri"
               onMouseOut={mouseOutEvent}
-            onMouseOver={mouseEventHandle}le="Ratnagiri"
+            onMouseOver={mouseEventHandle}
+             onDoubleClick={doubleclickEvent}
              
             >
               {/* <title>Name -{{ title }} Farmers -{{ farmers_count }}</title> */}
@@ -879,9 +907,10 @@ const MaharashtraSvg = () => {
               verticalAlign: 'baseline',
               width: 'auto',
             }}
-              tit
+              title="Sangli"
               onMouseOut={mouseOutEvent}
-            onMouseOver={mouseEventHandle}le="Sangli"
+            onMouseOver={mouseEventHandle}
+             onDoubleClick={doubleclickEvent}
              
             >
               {/* <title>Name -{{ title }} Farmers -{{ farmers_count }}</title> */}
@@ -912,9 +941,10 @@ const MaharashtraSvg = () => {
               verticalAlign: 'baseline',
               width: 'auto',
             }}
-              tit
+              title="Kolhapur"
               onMouseOut={mouseOutEvent}
-            onMouseOver={mouseEventHandle}le="Kolhapur"
+            onMouseOver={mouseEventHandle}
+             onDoubleClick={doubleclickEvent}
              
             >
               {/* <title>Name -{{ title }} Farmers -{{ farmers_count }}</title> */}
@@ -945,9 +975,10 @@ const MaharashtraSvg = () => {
               verticalAlign: 'baseline',
               width: 'auto',
             }}
-              tit
+              title="Sindhudurg"
               onMouseOut={mouseOutEvent}
-            onMouseOver={mouseEventHandle}le="Sindhudurg"
+            onMouseOver={mouseEventHandle}
+             onDoubleClick={doubleclickEvent}
              
             >
               {/* <title>Name -{{ title }} Farmers -{{ farmers_count }}</title> */}
@@ -978,9 +1009,10 @@ const MaharashtraSvg = () => {
               verticalAlign: 'baseline',
               width: 'auto',
             }}
-              tit
+              title="Palghar"
               onMouseOut={mouseOutEvent}
-            onMouseOver={mouseEventHandle}le="Palghar"
+            onMouseOver={mouseEventHandle}
+             onDoubleClick={doubleclickEvent}
              
             >
               {/* <title>Name -{{ title }} Farmers -{{ farmers_count }}</title> */}
@@ -1011,9 +1043,10 @@ const MaharashtraSvg = () => {
               verticalAlign: 'baseline',
               width: 'auto',
             }}
-              tit
+              title="Nandurbar"
               onMouseOut={mouseOutEvent}
-            onMouseOver={mouseEventHandle}le="Nandurbar"
+            onMouseOver={mouseEventHandle}
+             onDoubleClick={doubleclickEvent}
              
             >
               {/* <title>Name -{{ title }} Farmers -{{ farmers_count }}</title> */}
@@ -1044,9 +1077,10 @@ const MaharashtraSvg = () => {
               verticalAlign: 'baseline',
               width: 'auto',
             }}
-              tit
+              title="Amravati"
               onMouseOut={mouseOutEvent}
-            onMouseOver={mouseEventHandle}le="Amravati"
+            onMouseOver={mouseEventHandle}
+             onDoubleClick={doubleclickEvent}
              
             >
               {/* <title>Name -{{ title }} Farmers -{{ farmers_count }}</title> */}
@@ -1080,6 +1114,7 @@ const MaharashtraSvg = () => {
               title="Dhule"
               onMouseOut={mouseOutEvent}
             onMouseOver={mouseEventHandle}
+             onDoubleClick={doubleclickEvent}
              
             >
               {/* <title>Name -{{ title }} Farmers -{{ farmers_count }}</title> */}
@@ -1112,6 +1147,7 @@ const MaharashtraSvg = () => {
               title="Nagpur"
               onMouseOut={mouseOutEvent}
             onMouseOver={mouseEventHandle}
+             onDoubleClick={doubleclickEvent}
              
             >
               {/* <title>Name -{{ title }} Farmers -{{ farmers_count }}</title> */}
@@ -1145,6 +1181,7 @@ const MaharashtraSvg = () => {
               title="Aurangabad"
               onMouseOut={mouseOutEvent}
             onMouseOver={mouseEventHandle}
+             onDoubleClick={doubleclickEvent}
              
             >
               {/* <title>Name -{{ title }} Farmers -{{ farmers_count }}</title> */}
@@ -1178,6 +1215,7 @@ const MaharashtraSvg = () => {
               title="Raigad"
               onMouseOut={mouseOutEvent}
             onMouseOver={mouseEventHandle}
+             onDoubleClick={doubleclickEvent}
              
             >
               {/* <title>Name -{{ title }} Farmers -{{ farmers_count }}</title> */}
@@ -1211,6 +1249,7 @@ const MaharashtraSvg = () => {
               title="Mumbai Suburban"
               onMouseOut={mouseOutEvent}
             onMouseOver={mouseEventHandle}
+             onDoubleClick={doubleclickEvent}
              
             >
               {/* <title>Name -{{ title }} Farmers -{{ farmers_count }}</title> */}
@@ -1244,6 +1283,7 @@ const MaharashtraSvg = () => {
               title="Thane"
               onMouseOut={mouseOutEvent}
             onMouseOver={mouseEventHandle}
+             onDoubleClick={doubleclickEvent}
              
             >
               {/* <title>Name -{{ title }} Farmers -{{ farmers_count }}</title> */}

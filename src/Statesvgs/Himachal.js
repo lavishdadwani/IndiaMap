@@ -1,5 +1,7 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 const Himachal = (props) => {
+  const mHistory = useNavigate();
   const [state, setstate] = useState('');
 
   const toolTip = document.querySelector('.ToolTip');
@@ -12,11 +14,13 @@ const Himachal = (props) => {
     document.querySelector(clickid).style.stroke = '#FFF';
   };
 
-  // const doubleclickEvent = (e) => {
-  //   let clickid = '#' + e.target.id;
-  //   document.querySelector(clickid).style.strokeWidth = '6';
-  //   document.querySelector(clickid).style.stroke = '#ffffff';
-  // };
+  const doubleclickEvent = (e) => {
+    let clickid = '#' + e.target.id;
+    document.querySelector(clickid).style.strokeWidth = '6';
+    document.querySelector(clickid).style.stroke = '#ffffff';
+    mHistory(`/block`);
+  };
+
 
   const mouseEventHandle = (e) => {
     console.log(e.target.getAttribute('id'));
@@ -196,6 +200,7 @@ return (
           id="Sirmaur"
           onMouseOut={mouseOutEvent}
           onMouseOver={mouseEventHandle}
+           onDoubleClick={doubleclickEvent}
           style={{
             display: "inline",
             fill: "#fefee9",
@@ -216,6 +221,7 @@ return (
           id="Una"
           onMouseOut={mouseOutEvent}
           onMouseOver={mouseEventHandle}
+           onDoubleClick={doubleclickEvent}
           style={{
             display: "inline",
             fill: "#fefee9",
@@ -236,6 +242,7 @@ return (
           id="Mandi"
           onMouseOut={mouseOutEvent}
           onMouseOver={mouseEventHandle}
+           onDoubleClick={doubleclickEvent}
           style={{
             display: "inline",
             fill: "#fefee9",
@@ -256,6 +263,7 @@ return (
           id="Hamirpur"
           onMouseOut={mouseOutEvent}
           onMouseOver={mouseEventHandle}
+           onDoubleClick={doubleclickEvent}
           style={{
             display: "inline",
             fill: "#fefee9",
@@ -276,6 +284,7 @@ return (
           id="Bilaspur"
           onMouseOut={mouseOutEvent}
           onMouseOver={mouseEventHandle}
+           onDoubleClick={doubleclickEvent}
           style={{
             display: "inline",
             fill: "#fefee9",
@@ -296,6 +305,7 @@ return (
           id="Solan"
           onMouseOut={mouseOutEvent}
           onMouseOver={mouseEventHandle}
+           onDoubleClick={doubleclickEvent}
           style={{
             display: "inline",
             fill: "#fefee9",
@@ -316,6 +326,7 @@ return (
           id="Shimla"
           onMouseOut={mouseOutEvent}
           onMouseOver={mouseEventHandle}
+           onDoubleClick={doubleclickEvent}
           style={{
             display: "inline",
             fill: "#fefee9",
@@ -336,6 +347,7 @@ return (
           id="Kullu"
           onMouseOut={mouseOutEvent}
           onMouseOver={mouseEventHandle}
+           onDoubleClick={doubleclickEvent}
           style={{
             display: "inline",
             fill: "#fefee9",
@@ -356,6 +368,7 @@ return (
           id="Kangra"
           onMouseOut={mouseOutEvent}
           onMouseOver={mouseEventHandle}
+           onDoubleClick={doubleclickEvent}
           style={{
             display: "inline",
             fill: "#fefee9",
@@ -376,6 +389,7 @@ return (
           id="Chamba"
           onMouseOut={mouseOutEvent}
           onMouseOver={mouseEventHandle}
+           onDoubleClick={doubleclickEvent}
           style={{
             display: "inline",
             fill: "#fefee9",
@@ -396,6 +410,7 @@ return (
           id="Kinnaur"
           onMouseOut={mouseOutEvent}
           onMouseOver={mouseEventHandle}
+           onDoubleClick={doubleclickEvent}
           style={{
             display: "inline",
             fill: "#fefee9",
@@ -416,6 +431,7 @@ return (
           id="Lahul_&_Spiti"
           onMouseOut={mouseOutEvent}
           onMouseOver={mouseEventHandle}
+           onDoubleClick={doubleclickEvent}
           style={{
             display: "inline",
             fill: "#fefee9",

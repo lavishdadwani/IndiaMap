@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 
 const Tamilnadu = (props) => {
+  const mHistory = useNavigate();
   const [state, setstate] = useState('');
 
   const toolTip = document.querySelector('.ToolTip');
@@ -13,11 +15,13 @@ const Tamilnadu = (props) => {
     document.querySelector(clickid).style.stroke = '#FFF';
   };
 
-  // const doubleclickEvent = (e) => {
-  //   let clickid = '#' + e.target.id;
-  //   document.querySelector(clickid).style.strokeWidth = '6';
-  //   document.querySelector(clickid).style.stroke = '#ffffff';
-  // };
+  const doubleclickEvent = (e) => {
+    let clickid = '#' + e.target.id;
+    document.querySelector(clickid).style.strokeWidth = '6';
+    document.querySelector(clickid).style.stroke = '#ffffff';
+    mHistory(`/block`);
+  };
+
 
   const mouseEventHandle = (e) => {
     console.log(e.target.getAttribute('id'));
@@ -670,6 +674,7 @@ const Tamilnadu = (props) => {
       clipPath="none"
        onMouseOut={mouseOutEvent}
         onMouseOver={mouseEventHandle}
+         onDoubleClick={doubleclickEvent}
     />
     <path
       id="Chennai"
@@ -688,6 +693,7 @@ const Tamilnadu = (props) => {
       clipPath="none"
        onMouseOut={mouseOutEvent}
         onMouseOver={mouseEventHandle}
+         onDoubleClick={doubleclickEvent}
     />
     <path
       id="Coimbatore"
@@ -706,6 +712,7 @@ const Tamilnadu = (props) => {
       clipPath="none"
        onMouseOut={mouseOutEvent}
         onMouseOver={mouseEventHandle}
+         onDoubleClick={doubleclickEvent}
     />
     <path
       id="Cuddalore"
@@ -724,6 +731,7 @@ const Tamilnadu = (props) => {
       clipPath="none"
        onMouseOut={mouseOutEvent}
         onMouseOver={mouseEventHandle}
+         onDoubleClick={doubleclickEvent}
     />
     <path
       id="Dharmapuri"
@@ -742,6 +750,7 @@ const Tamilnadu = (props) => {
       clipPath="none"
        onMouseOut={mouseOutEvent}
         onMouseOver={mouseEventHandle}
+         onDoubleClick={doubleclickEvent}
     />
     <path
       id="Dindigul"
@@ -760,6 +769,7 @@ const Tamilnadu = (props) => {
       clipPath="none"
        onMouseOut={mouseOutEvent}
         onMouseOver={mouseEventHandle}
+         onDoubleClick={doubleclickEvent}
     />
     <path
       id="Erode"
@@ -778,6 +788,7 @@ const Tamilnadu = (props) => {
       clipPath="none"
        onMouseOut={mouseOutEvent}
         onMouseOver={mouseEventHandle}
+         onDoubleClick={doubleclickEvent}
     />
     <path
       id="Kancheepuram"
@@ -796,6 +807,7 @@ const Tamilnadu = (props) => {
       clipPath="none"
        onMouseOut={mouseOutEvent}
         onMouseOver={mouseEventHandle}
+         onDoubleClick={doubleclickEvent}
     />
     <path
       id="Kanniyakumari"
@@ -814,6 +826,7 @@ const Tamilnadu = (props) => {
       clipPath="none"
        onMouseOut={mouseOutEvent}
         onMouseOver={mouseEventHandle}
+         onDoubleClick={doubleclickEvent}
     />
     <path
       id="Karur"
@@ -832,6 +845,7 @@ const Tamilnadu = (props) => {
       clipPath="none"
        onMouseOut={mouseOutEvent}
         onMouseOver={mouseEventHandle}
+         onDoubleClick={doubleclickEvent}
     />
     <path
       id="Krishnagiri"
@@ -850,6 +864,7 @@ const Tamilnadu = (props) => {
       clipPath="none"
        onMouseOut={mouseOutEvent}
         onMouseOver={mouseEventHandle}
+         onDoubleClick={doubleclickEvent}
     />
     <path
       id="Madurai"
@@ -868,6 +883,7 @@ const Tamilnadu = (props) => {
       clipPath="none"
        onMouseOut={mouseOutEvent}
         onMouseOver={mouseEventHandle}
+         onDoubleClick={doubleclickEvent}
     />
     <path
       id="Nagappattinam"
@@ -886,6 +902,7 @@ const Tamilnadu = (props) => {
       clipPath="none"
        onMouseOut={mouseOutEvent}
         onMouseOver={mouseEventHandle}
+         onDoubleClick={doubleclickEvent}
     />
     <path
       id="Namakkal"
@@ -904,6 +921,7 @@ const Tamilnadu = (props) => {
       clipPath="none"
        onMouseOut={mouseOutEvent}
         onMouseOver={mouseEventHandle}
+         onDoubleClick={doubleclickEvent}
     />
     <path
       id="Perambalur"
@@ -922,6 +940,7 @@ const Tamilnadu = (props) => {
       clipPath="none"
        onMouseOut={mouseOutEvent}
         onMouseOver={mouseEventHandle}
+         onDoubleClick={doubleclickEvent}
     />
     <path
       id="Pudukkottai"
@@ -940,6 +959,7 @@ const Tamilnadu = (props) => {
       clipPath="none"
        onMouseOut={mouseOutEvent}
         onMouseOver={mouseEventHandle}
+         onDoubleClick={doubleclickEvent}
     />
     <path
       id="Ramanathapuram"
@@ -958,6 +978,7 @@ const Tamilnadu = (props) => {
       clipPath="none"
        onMouseOut={mouseOutEvent}
         onMouseOver={mouseEventHandle}
+         onDoubleClick={doubleclickEvent}
     />
     <path
       id="Salem"
@@ -976,6 +997,7 @@ const Tamilnadu = (props) => {
       clipPath="none"
        onMouseOut={mouseOutEvent}
         onMouseOver={mouseEventHandle}
+         onDoubleClick={doubleclickEvent}
     />
     <path
       id="Sivaganga"
@@ -994,6 +1016,7 @@ const Tamilnadu = (props) => {
       clipPath="none"
        onMouseOut={mouseOutEvent}
         onMouseOver={mouseEventHandle}
+         onDoubleClick={doubleclickEvent}
     />
     <path
       id="Thanjavur"
@@ -1012,6 +1035,7 @@ const Tamilnadu = (props) => {
       clipPath="none"
        onMouseOut={mouseOutEvent}
         onMouseOver={mouseEventHandle}
+         onDoubleClick={doubleclickEvent}
     />
     <path
       id="The Nilgiris"
@@ -1030,6 +1054,7 @@ const Tamilnadu = (props) => {
       clipPath="none"
        onMouseOut={mouseOutEvent}
         onMouseOver={mouseEventHandle}
+         onDoubleClick={doubleclickEvent}
     />
     <path
       id="Theni"
@@ -1048,6 +1073,7 @@ const Tamilnadu = (props) => {
       clipPath="none"
        onMouseOut={mouseOutEvent}
         onMouseOver={mouseEventHandle}
+         onDoubleClick={doubleclickEvent}
     />
     <path
       id="Thiruvallur"
@@ -1066,6 +1092,7 @@ const Tamilnadu = (props) => {
       clipPath="none"
        onMouseOut={mouseOutEvent}
         onMouseOver={mouseEventHandle}
+         onDoubleClick={doubleclickEvent}
     />
     <path
       id="Thiruvarur"
@@ -1084,6 +1111,7 @@ const Tamilnadu = (props) => {
       clipPath="none"
        onMouseOut={mouseOutEvent}
         onMouseOver={mouseEventHandle}
+         onDoubleClick={doubleclickEvent}
     />
     <path
       id="Thoothukkudi"
@@ -1102,6 +1130,7 @@ const Tamilnadu = (props) => {
       clipPath="none"
        onMouseOut={mouseOutEvent}
         onMouseOver={mouseEventHandle}
+         onDoubleClick={doubleclickEvent}
     />
     <path
       id="Tiruchirappalli"
@@ -1120,6 +1149,7 @@ const Tamilnadu = (props) => {
       clipPath="none"
        onMouseOut={mouseOutEvent}
         onMouseOver={mouseEventHandle}
+         onDoubleClick={doubleclickEvent}
     />
     <path
       id="Tirunelveli"
@@ -1138,6 +1168,7 @@ const Tamilnadu = (props) => {
       clipPath="none"
        onMouseOut={mouseOutEvent}
         onMouseOver={mouseEventHandle}
+         onDoubleClick={doubleclickEvent}
     />
     <path
       id="Tiruppur"
@@ -1156,6 +1187,7 @@ const Tamilnadu = (props) => {
       clipPath="none"
        onMouseOut={mouseOutEvent}
         onMouseOver={mouseEventHandle}
+         onDoubleClick={doubleclickEvent}
     />
     <path
       id="Tiruvannamalai"
@@ -1174,6 +1206,7 @@ const Tamilnadu = (props) => {
       clipPath="none"
        onMouseOut={mouseOutEvent}
         onMouseOver={mouseEventHandle}
+         onDoubleClick={doubleclickEvent}
     />
     <path
       id="Vellore"
@@ -1192,6 +1225,7 @@ const Tamilnadu = (props) => {
       clipPath="none"
        onMouseOut={mouseOutEvent}
         onMouseOver={mouseEventHandle}
+         onDoubleClick={doubleclickEvent}
     />
     <path
       id="Viluppuram"
@@ -1210,6 +1244,7 @@ const Tamilnadu = (props) => {
       clipPath="none"
        onMouseOut={mouseOutEvent}
         onMouseOver={mouseEventHandle}
+         onDoubleClick={doubleclickEvent}
     />
     <path
       id="Virudunagar"
@@ -1228,6 +1263,7 @@ const Tamilnadu = (props) => {
       clipPath="none"
        onMouseOut={mouseOutEvent}
         onMouseOver={mouseEventHandle}
+         onDoubleClick={doubleclickEvent}
     />
   
     <defs>
